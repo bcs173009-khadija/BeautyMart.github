@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Deals</title>
+
+  <link rel="stylesheet" href="bootstrap.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   
+   
+   
+  <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Josefin Sans', sans-serif;
+        }
+        /* Make the image fully responsive */
+        .carousel-inner img {
+            width: 100%;
+            height: 100%;
+        }
+		
+		button {
+             background-color: #4CAF50;
+             color: white;
+             padding: 14px 20px;
+             margin: 8px 0;
+             border: none;
+             cursor: pointer;
+             width: 100%;
+             opacity: 0.9;
+        }
+
+        section {
+            padding: 60px 0;
+        }
+
+        .fa {
+            padding: 20px;
+            font-size: 30px;
+            width: 50px;
+            text-align: center;
+            text-decoration: none;
+        }
+
+            .fa:hover {
+                opacity: 0.7;
+            }
+
+        .fa-facebook {
+            background: #3B5998;
+            color: white;
+        }
+
+        .fa-twitter {
+            background: #55ACEE;
+            color: white;
+        }
+
+        .fa-google {
+            background: #dd4b39;
+            color: white;
+        }
+
+
+        .fa-youtube {
+            background: #bb0000;
+            color: white;
+        }
+
+        .fa-instagram {
+            background: #125688;
+            color: white;
+        }
+
+        .fa-pinterest {
+            background: #cb2027;
+            color: white;
+        }
+         
+		
+        .jumbotron {
+             margin-bottom: 0;
+        } 
+		
+	    .navbar {
+	  
+             margin-bottom: 50px;
+             border-radius: 0;
+        }
+		
+		
+		.cancelbtn {
+             padding: 14px 20px;
+             background-color: #f44336;
+        }
+
+
+        .cancelbtn, .signupbtn {
+             float: left;
+             width: 50%;
+        }
+		
+		/* Modal Content/Box */
+        .modal-content {
+             background-color: #fefefe;
+             margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+             border: 1px solid #888;
+             width: 80%; /* Could be more or less, depending on screen size */
+        }
+
+        /* Style the horizontal ruler */
+        hr {
+             border: 1px solid #f1f1f1;
+             margin-bottom: 25px;
+        }
+ 
+        /* The Close Button (x) */
+        .close {
+             position: absolute;
+             right: 35px;
+             top: 15px;
+             font-size: 40px;
+             font-weight: bold;
+             color: #f1f1f1;
+        }
+
+        .close:hover,
+        .close:focus {
+             color: #f44336;
+             cursor: pointer;
+        }
+
+        /* Clear floats */
+        .clearfix::after {
+             content: "";
+             clear: both;
+             display: table;
+        }
+
+		
+		.modal-content {
+             background-color: #fefefe;
+             margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+             border: 1px solid #888;
+             width: 80%; /* Could be more or less, depending on screen size */
+        }
+
+        section .section-title {
+            text-align: center;
+            color: #007b5e;
+            margin-bottom: 50px;
+            text-transform: uppercase;
+        }
+
+        #footer {
+            background: black !important;
+        }
+
+
+            #footer h5 {
+                padding-left: 10px;
+                border-left: 3px solid #eeeeee;
+                padding-bottom: 6px;
+                margin-bottom: 20px;
+                color: #ffffff;
+            }
+
+            #footer a {
+                color: #ffffff;
+                text-decoration: none !important;
+                background-color: transparent;
+            }
+
+            #footer ul.social li {
+                padding: 3px 0;
+            }
+
+                #footer ul.social li a i {
+                    margin-right: 5px;
+                    font-size: 25px;
+                    -webkit-transition: .5s all ease;
+                    -moz-transition: .5s all ease;
+                    transition: .5s all ease;
+                }
+
+                #footer ul.social li:hover a i {
+                    font-size: 30px;
+                    margin-top: -10px;
+                }
+
+                #footer ul.social li a,
+                #footer ul.quick-links li a {
+                    color: #ffffff;
+                }
+
+                    #footer ul.social li a:hover {
+                        color: #eeeeee;
+                    }
+
+            #footer ul.quick-links li {
+                padding: 3px 0;
+                -webkit-transition: .5s all ease;
+                -moz-transition: .5s all ease;
+                transition: .5s all ease;
+            }
+
+                #footer ul.quick-links li:hover {
+                    padding: 3px 0;
+                    margin-left: 5px;
+                    font-weight: 700;
+                }
+
+                #footer ul.quick-links li a i {
+                    margin-right: 5px;
+                }
+
+                #footer ul.quick-links li:hover a i {
+                    font-weight: 700;
+                }
+
+        @media (max-width:767px) {
+            #footer h5 {
+                padding-left: 0;
+                border-left: transparent;
+                padding-bottom: 0px;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $("#submit").click(function () {
+                alert("you are sucessfully regristerd  in BeautyMart.com ")
+            })
+        });
+    </script>
+
+</head>
+<body>
+     
+	 <div class="jumbotron">
+		<div style="background-color: pink">
+		<div class="d-flex justify-content-center">
+		
+        <div class="container text-center">
+
+             <h1>Beauty Mart</h1>      
+             <p>High Quality Products</p>
+        </div>
+	  </div>
+	  </div>
+    </div>
+	 
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="index.html">
+	          <image class="img-circle" src="logo.jpg" height="100%">
+			</a> 
+	  <a class="navbar-brand" href="#">Deals</a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	  </button>
+
+	  <div class="collapse navbar-collapse" id="navbarColor02">
+		<ul class="navbar-nav mr-auto">
+		  <li class="nav-item active">
+			<a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+		  </li>
+		  <li class="nav-item">
+			<a class="nav-link" href="#">Stores</a>
+		  </li>
+		  <li class="nav-item">
+			<a class="nav-link" href="#">Contact</a>
+		  </li>
+		</ul>
+		<ul class="nav navbar-nav navbar-right">
+		<form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <a class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</a>
+        </form>
+        <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+      </ul>
+		
+	  </div>
+	</nav>	
+
+
+    <div class="container">
+           <h2>Top Deals</h2>
+           <div id="myCarousel" class="carousel slide" data-ride="carousel">
+          <!-- Indicators -->
+     <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+     </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+
+      <div class="item active">
+        <img src="image.jpg"  alt="Los Angeles" style="width:100%;">
+        <div class="carousel-caption">
+          <h3>All about History</h3>
+          <p>"History repeats itself, first as tragedy, second as farce."</p>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="imagess.jpg" alt="Chicago" style="width:100%;">
+        <div class="carousel-caption">
+         
+        </div>
+      </div>
+    
+      <div class="item">
+        <img src="lede.jpg" alt="New York" style="width:100%;">
+        <div class="carousel-caption">
+          <h3>ABOUT More</h3>
+          <p>We love Makeup</p>
+        </div>
+      </div>
+  
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+    <section class="bg-secondary mb-5">
+	 <div class="container">    
+		  <h1 class="text-center text-capitalize pt-5 ">Hot Deals</h1>
+		  <br><br><br><br>
+          <div class="row">
+            <div class="col-sm-4">
+              <div class="panel panel-success">
+                 <div class="panel-heading">FOUNDATIONS</div>
+                   <div class="panel-body"><img src="imagess.jpg" class="img-responsive" style="width:100%" "height:40%" alt="Image"></div>
+                     <div class="panel-footer">Makeup Forever full coverage foundations</div>
+					 <span class="price is-pulled-right">Rs2100</span>
+					 <button class="button is-pulled-right add-to-cart">Add to Cart</button>
+                   </div>
+            </div>
+            <div class="col-sm-4"> 
+                <div class="panel panel-danger">
+                    <div class="panel-heading">EYE SHADOW PALATES</div>
+                        <div class="panel-body"><img src="lede.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
+                         <div class="panel-footer">14colors eyeshadow palate</div>
+						 <span class="price is-pulled-right">Rs6000</span>
+						 <button class="button is-pulled-right add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+            <div class="col-sm-4"> 
+               <div class="panel panel-success">
+                  <div class="panel-heading">MAKEUP BRUSHES</div>
+                     <div class="panel-body"><img src="images.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
+                         <div class="panel-footer">Buy professional-quality makeup brush sets online at amazing prices from BH Cosmetics.</div>
+						 <span class="price is-pulled-right">Rs1800</span>
+						 <button class="button is-pulled-right add-to-cart">Add to Cart</button>
+               </div>
+            </div>
+         </div>
+        </div><br>
+	
+       <div class="container">    
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="panel panel-danger">
+                  <div class="panel-heading">LIPSTICKES</div>
+                  <div class="panel-body"><img src="lipstick.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
+                  <div class="panel-footer">This creamy matte lipstick features high colour payoff in a no-shine matte finish.</div>
+				  <span class="price is-pulled-right">Rs1000</span>
+				  <button class="button is-pulled-right add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+            <div class="col-sm-4"> 
+                <div class="panel panel-success">
+                    <div class="panel-heading">CONCELERS</div>
+                      <div class="panel-body"><img src="concelar.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
+                      <div class="panel-footer">Dark circles and undereye discoloration,concealers that have radiant or luminizing formulas</div>
+					  <span class="price is-pulled-right">Rs1100</span>
+					  <button class="button is-pulled-right add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+            <div class="col-sm-4"> 
+                <div class="panel panel-danger">
+                    <div class="panel-heading">HIGHLIGHTERS</div>
+                       <div class="panel-body"><img src="HL.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
+                       <div class="panel-footer">Face highlighter makeup! Browse powder, pearls, liquid & highlighter sticks. Affordable, cruelty-free beauty</div>
+					   <span class="price is-pulled-right">Rs1500</span>
+					   <button class="button is-pulled-right add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div><br>
+
+            
+                      
+    </section>
+	
+	<section id="footer">
+        <div class="container">
+            
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
+                    <ul class="list-unstyled list-inline social text-center">
+                        <li class="list-inline-item"><a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a></li>
+                        <li class="list-inline-item"><a href="https://twitter.com/explore"><i class="fa fa-twitter"></i></a></li>
+                        <li class="list-inline-item"><a href="https://www.instagram.com/accounts/login/"><i class="fa fa-instagram"></i></a></li>
+                        <li class="list-inline-item"><a href="https://www.google.com/"><i class="fa fa-google-plus"></i></a></li>
+                        <li class="list-inline-item"><a href="https://mail.google.com/mail/u/0/" target="_blank"><i class="fa fa-envelope"></i></a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
+                    <p><u><a href="https://www.nationaltransaction.com/">National Transaction Corporation</a></u> is a Registered MSP/ISO of Elavon, Inc. Georgia [a wholly owned subsidiary of U.S. Bancorp, Minneapolis, MN]</p>
+                    <p class="h6">&copy All right Reversed.<a class="text-green ml-2" href="https://www.daraz.pk" target="_blank">Draz.pk</a></p>
+                </div>
+
+            </div>
+        </div>
+		
+	
+    </section>
+</body>
+</html>
