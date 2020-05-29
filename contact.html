@@ -1,18 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <title>Contact Us</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact Us</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-  <link rel="stylesheet" href="bootstrap.css">
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-   
+    <link href="bootstrap.min.css" rel="stylesheet" />
+    <link href="bootstrapv3.min.css" rel="stylesheet" />
+    <link href="bootstrapv4.css" rel="stylesheet" />
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="jquery-3.4.1.min (1).js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  
-  <style>
+    <style>
         * {
             margin: 0;
             padding: 0;
@@ -98,6 +105,16 @@
              border-radius: 0;
         }
 		
+		button {
+             background-color: #4CAF50;
+             color: white;
+             padding: 14px 20px;
+             margin: 8px 0;
+             border: none;
+             cursor: pointer;
+             width: 100%;
+             opacity: 0.9;
+        }
 		
 		.cancelbtn {
              padding: 14px 20px;
@@ -245,47 +262,72 @@
         });
     </script>
 
+
+
+
 </head>
 <body>
-
-      <div class="jumbotron">
+        
+	<div class="jumbotron">
 		<div style="background-color: pink">
-		    <div class="d-flex justify-content-center">
+		<div class="d-flex justify-content-center">
 		
-                  <div class="container text-center">
+        <div class="container text-center">
 
-                     <h1>Beauty Mart</h1>      
-                     <p>High Quality Products</p>
-                  </div>
-	        </div>
-	    </div>
-    </div>
-	 
-   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="index.html">
-	          <image class="img-circle" src="logo.jpg" height="100%">
-			</a> 
-	  <a class="navbar-brand" href="contact.html">Contact Us</a>
-	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
-		<span class="navbar-toggler-icon"></span>
-	  </button>
-
-	  <div class="collapse navbar-collapse" id="navbarColor02">
-		<ul class="navbar-nav mr-auto">
-		  <li class="nav-item active">
-			<a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-		  </li>
-		</ul>
-		<ul class="nav navbar-nav navbar-right">
-		<form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
-       
-      </ul>
-		
+             <h1>Beauty Mart</h1>      
+             <p>High Quality Products</p>
+        </div>
 	  </div>
-	</nav>	
+	  </div>
+    </div>
+        <!--navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		    <a class="navbar-brand" href="index.html">
+	          <image class="img-circle" src="logo.jpg">
+			</a> 
+            <a class="navbar-brand" href="contact.html"><h2>Contact Us</h2></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html"><h3>Home</h3> <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="about.html"><h3>About</h3></a>
+                    </li>
+                    
+                    <li class="nav-item active">
+                        <a class="nav-link" href="deals.html"><h3>Deals</h3> <span class="sr-only">(current)</span></a>
+                    </li>
+                    
+                    
+                    <li id="#contact" class="nav-item active">
+                        <a class="nav-link" href="Products.html"><h3>Products</h3><span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <h3>Brands</h3>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="https://hudabeauty.com/us/en_US/home">Huda Beauty</a>
+                            <a class="dropdown-item" href="https://www.maccosmetics.com/">MAC</a>
+                            <a class="dropdown-item" href="https://www.maybelline.com/">Maybelline</a>
+                            <a class="dropdown-item" href="http://www.bbamna.com/">Beautify by Amna</a>
+                            <a class="dropdown-item" href="https://www.lorealparisusa.com/products/makeup.aspx">L'OREAL Paris</a>
+                        </div>
+                    </li>
+					<ul class="nav navbar-nav navbar-right">
+		          <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <a class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</a>
+                  </form>
+                   <li class="nav-item active"><a href="checkout.html"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+                </ul>
+            </div>
+        </nav>
 
 
 
