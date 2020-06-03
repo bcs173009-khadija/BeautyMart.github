@@ -3,7 +3,11 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Contact Us</title>
+	<link rel="stylesheet" href="bootstrap.min.css">
+	<script src="jquery.js"></script>
+        
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <title>Add/Remove Products</title>
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -11,6 +15,8 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	
+	<link rel="stylesheet" href="bootstrap.min.css" />
 
     <link href="bootstrap.min.css" rel="stylesheet" />
     <link href="bootstrapv3.min.css" rel="stylesheet" />
@@ -254,13 +260,18 @@
             }
         }
     </style>
-    <script>
-        $(document).ready(function () {
-            $("#submit").click(function () {
-                alert("you are sucessfully regristerd  in BeautyMart.com ")
-            })
-        });
-    </script>
+   <script>
+	
+	$(document).ready(function(){
+    // Get value on button click and show alert
+      
+    $(".button").click(function(){
+	
+	 alert("Product successfully Added");
+     
+	});
+	});
+	</script>
 
 
 
@@ -281,12 +292,12 @@
 	  </div>
     </div>
         <!--navbar-->
-		<div style="background-image: url('peach.jpg');">
+	<div style="background-image: url('peach.jpg');">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 		    <a class="navbar-brand" href="index.html">
 	          <image class="img-circle" src="logo.jpg">
 			</a> 
-            <a class="navbar-brand" href="contact.html"><h2>Contact Us</h2></a>
+            <a class="navbar-brand" href="add.html"><h2>Add/Remove Products</h2></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -294,112 +305,144 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="index.html"><h3>Home</h3> <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="admin.html"><h3>Dashboard</h3> <span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="About.html"><h3>About</h3></a>
-                    </li>
+                    
                     
                     <li class="nav-item active">
-                        <a class="nav-link" href="deals.html"><h3>Deals</h3> <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="update.html"><h3>UpdateProducts</h3> <span class="sr-only">(current)</span></a>
                     </li>
-                    
-                    
                     <li id="#contact" class="nav-item active">
-                        <a class="nav-link" href="Products.html"><h3>Products</h3><span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="index.html"><h3>SignOut</h3><span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item active dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <h3>Brands</h3>
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="https://hudabeauty.com/us/en_US/home">Huda Beauty</a>
-                            <a class="dropdown-item" href="https://www.maccosmetics.com/">MAC</a>
-                            <a class="dropdown-item" href="https://www.maybelline.com/">Maybelline</a>
-                            <a class="dropdown-item" href="http://www.bbamna.com/">Beautify by Amna</a>
-                            <a class="dropdown-item" href="https://www.lorealparisusa.com/products/makeup.aspx">L'OREAL Paris</a>
-                        </div>
-                    </li>
+                    
+                   
 					<ul class="nav navbar-nav navbar-right">
 		          <form class="form-inline my-2 my-lg-0">
                     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                     <a class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</a>
                   </form>
-                   <li class="nav-item active"><a href="cart.html"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+                   
                 </ul>
             </div>
         </nav>
 
-
-
-
-
-
-  <div class="container">
-         
-		    <div class="row">
-			     <div class="col-lg-3"></div>
-				 
-		         <div style="border:groove" class="col-lg-6">
-				   <form>
-                    <fieldset>
-                       <legend>Contact Us</legend>
-					   
+     <section>
+	      <div class="content">
+                <div class="container-fluid">
+                     <div class="row">
+                          <div class="col-lg-1"></div>
+                              <div style="border:groove ;width:80%;float:right; margin-top: 10%; padding: 5%;" class="col-lg-10">
+                          <form>
+						    <fieldset>
+                                  <legend><b>ADD PRODUCT</b></legend>
+                            <div class="form-group">
+                                 <label for="ProductName">Product NAME:</label>
+                                 <input type="text" class="form-control" id="product_name" placeholder="" />
+                            </div>
+                            <div class="form-group">
+                                 <label for="Name">PRICE:</label>
+                                 <input type="text" class="form-control" id="Product_price" placeholder="" />
+                            </div>
 					        <div class="form-group">
-                                 <label for="exampleFirstName">First Name</label>
-                                 <input type="fname" class="form-control" id="exampleFirstName"  placeholder="Enter First Name">
-                                 
+                                 <label for="Name">Description:</label>
+                                 <input type="text" class="form-control" id="Person_CNIC" placeholder="" />
                             </div>
-							
+					        <div class="form-group">
+                                     <label for="Name">Brand:</label>
+                                     <input type="text" class="form-control" id="brand" placeholder="" />
+                            </div>
 							<div class="form-group">
-                                 <label for="exampleLastName">Last Name</label>
-                                 <input type="lname" class="form-control" id="exampleLastName"  placeholder="Enter Last Name">
-                                 
+                        
+						             <label for="Name">Product Catagory:</label>
+                                     <input type="text" class="form-control" id="product_catagory" placeholder=""/>
+						       </br>
+						             <label for="Name">Product consistency:</label>
+						              <input type="text" class="form-control" id="product_consistency" placeholder="" />
+						       </br>
+						             <label for="Name">Shades</label>
+						       </br>
+						    </div>
+						    <div class="form-check form-check-inline">
+                                     <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                     <label class="form-check-label" for="inlineRadio1">dark</label>
                             </div>
-                           
+                            <div class="form-check form-check-inline">
+                                 <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                 <label class="form-check-label" for="inlineRadio2">light</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                                  <label class="form-check-label" for="inlineRadio3">medium</label>
+                            </div>
+							<a href="admin.html"><button type="button" class="button">Add Product</button></a>
+                    </div>
+					
+				</fieldset>
+                </form>
+                </div>					
+            </div>        
+	 </section>
+	 
+	  <section>
+	      <div class="content">
+                <div class="container-fluid">
+                     <div class="row">
+                          <div class="col-lg-1"></div>
+                              <div style="border:groove ;width:80%;float:right; margin-top: 10%; padding: 5%;" class="col-lg-10">
+                          <form>
+						    <fieldset>
+                                  <legend><b>Romove PRODUCT</b></legend>
                             <div class="form-group">
-                                 <label for="exampleInputEmail1">Email address</label>
-                                 <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                                 
+                                 <label for="ProductName">Product NAME:</label>
+                                 <input type="text" class="form-control" id="product_name" placeholder="" />
                             </div>
                             <div class="form-group">
-                                 <label for="exampleInputPassword1">Password</label>
-                                 <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                                 <label for="Name">Product ID</label>
+                                 <input type="text" class="form-control" id="Product_id" placeholder="" />
                             </div>
-                            <div class="form-group">
-                                 <label for="messagetype1">Message Type</label>
-                                 <select class="form-control" id="messagetype1">
-                                     <option>Select Message Type</option>
-                                     <option>Product Information</option>
-                                     <option>Order Information</option>
-                                     <option>Missing Items</option>
-                                     <option>General Question</option>
-                                 </select>
+					        
+					        <div class="form-group">
+                                     <label for="Name">Brand Name:</label>
+                                     <input type="text" class="form-control" id="brand" placeholder="" />
                             </div>
-                            <div class="form-group">
-                                      <label for="comment">Comment</label>
-                                      <textarea class="form-control" id="comment" rows="3"></textarea>
+							<div class="form-group">
+                        
+						             <label for="Name">Product Catagory:</label>
+                                     <input type="text" class="form-control" id="Product_catagory" placeholder=""/>
+						       
+						             
+						       </br>
+						             <label for="Name">Shades</label>
+						       </br>
+						
+						    <div class="form-check form-check-inline">
+                                     <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                     <label class="form-check-label" for="inlineRadio1">dark</label>
                             </div>
+                            <div class="form-check form-check-inline">
+                                 <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                 <label class="form-check-label" for="inlineRadio2">light</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                                  <label class="form-check-label" for="inlineRadio3">medium</label>
+                            </div>
+                    </div>
+					<a href="admin.html"><button type="button" class="button">Remove Product</button></a>
+				</fieldset>
+                </form>
+                </div>					
+            </div>        
+	 </section>
+
+     
     
-      
-                    </fieldset>
-                   
-                          <button type="button" class="button is-pulled-right" onclick=" window.location.href='index.html'">Submit</button>
+	</div>
 
-                 </form>
-				 
-				 </div>
-				 
-				  <div class="col-lg-3"></div>
-		    </div>
-  
-  
-   </div>
-   <br><br><br>
 
-   
-   </div>
-	
+
+    
 	<section id="footer">
         <div class="container">
             

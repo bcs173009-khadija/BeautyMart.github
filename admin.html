@@ -3,7 +3,8 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Contact Us</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <title>Administration</title>
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -11,6 +12,8 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	
+	<link rel="stylesheet" href="bootstrap.min.css" />
 
     <link href="bootstrap.min.css" rel="stylesheet" />
     <link href="bootstrapv3.min.css" rel="stylesheet" />
@@ -281,12 +284,12 @@
 	  </div>
     </div>
         <!--navbar-->
-		<div style="background-image: url('peach.jpg');">
+	<div style="background-image: url('peach.jpg');">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 		    <a class="navbar-brand" href="index.html">
 	          <image class="img-circle" src="logo.jpg">
 			</a> 
-            <a class="navbar-brand" href="contact.html"><h2>Contact Us</h2></a>
+            <a class="navbar-brand" href="admin.html"><h2>Dashboard</h2></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -294,112 +297,119 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="index.html"><h3>Home</h3> <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="add.html"><h3>Add/RemoveProduct</h3> <span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="About.html"><h3>About</h3></a>
-                    </li>
+                    
                     
                     <li class="nav-item active">
-                        <a class="nav-link" href="deals.html"><h3>Deals</h3> <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="update.html"><h3>UpdateProducts</h3> <span class="sr-only">(current)</span></a>
                     </li>
-                    
-                    
                     <li id="#contact" class="nav-item active">
-                        <a class="nav-link" href="Products.html"><h3>Products</h3><span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="index.html"><h3>SignOut</h3><span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item active dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <h3>Brands</h3>
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="https://hudabeauty.com/us/en_US/home">Huda Beauty</a>
-                            <a class="dropdown-item" href="https://www.maccosmetics.com/">MAC</a>
-                            <a class="dropdown-item" href="https://www.maybelline.com/">Maybelline</a>
-                            <a class="dropdown-item" href="http://www.bbamna.com/">Beautify by Amna</a>
-                            <a class="dropdown-item" href="https://www.lorealparisusa.com/products/makeup.aspx">L'OREAL Paris</a>
-                        </div>
-                    </li>
+                    
+                   
 					<ul class="nav navbar-nav navbar-right">
 		          <form class="form-inline my-2 my-lg-0">
                     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                     <a class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</a>
                   </form>
-                   <li class="nav-item active"><a href="cart.html"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+                   
                 </ul>
             </div>
         </nav>
 
-
-
-
-
-
-  <div class="container">
-         
-		    <div class="row">
-			     <div class="col-lg-3"></div>
-				 
-		         <div style="border:groove" class="col-lg-6">
-				   <form>
-                    <fieldset>
-                       <legend>Contact Us</legend>
-					   
-					        <div class="form-group">
-                                 <label for="exampleFirstName">First Name</label>
-                                 <input type="fname" class="form-control" id="exampleFirstName"  placeholder="Enter First Name">
-                                 
+     <section>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card ">
+                                <div class="card-header ">
+                                    <h4 class="card-title">Website Statistics</h4>
+                                    <p class="card-category">Last Campaign Performance</p>
+                                </div>
+                                <div class="card-body ">
+                                    <div class="card-body"><img src="pie.png" class="img-responsive" style="width:100%" "height:40%"></div>
+                                </div>
+                                <div class="card-footer ">
+                                    <div class="legend">
+                                        <i class="fa fa-circle text-info"></i> Open
+                                        <i class="fa fa-circle text-danger"></i> Bounce
+                                        <i class="fa fa-circle text-warning"></i> Unsubscribe
+                                    </div>
+                                    <hr>
+                                    <div class="stats">
+                                        <i class="fa fa-clock-o"></i> Campaign sent 2 days ago
+                                    </div>
+                                </div>
                             </div>
-							
-							<div class="form-group">
-                                 <label for="exampleLastName">Last Name</label>
-                                 <input type="lname" class="form-control" id="exampleLastName"  placeholder="Enter Last Name">
-                                 
-                            </div>
-                           
-                            <div class="form-group">
-                                 <label for="exampleInputEmail1">Email address</label>
-                                 <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                                 
-                            </div>
-                            <div class="form-group">
-                                 <label for="exampleInputPassword1">Password</label>
-                                 <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                            </div>
-                            <div class="form-group">
-                                 <label for="messagetype1">Message Type</label>
-                                 <select class="form-control" id="messagetype1">
-                                     <option>Select Message Type</option>
-                                     <option>Product Information</option>
-                                     <option>Order Information</option>
-                                     <option>Missing Items</option>
-                                     <option>General Question</option>
-                                 </select>
-                            </div>
-                            <div class="form-group">
-                                      <label for="comment">Comment</label>
-                                      <textarea class="form-control" id="comment" rows="3"></textarea>
-                            </div>
-    
-      
-                    </fieldset>
-                   
-                          <button type="button" class="button is-pulled-right" onclick=" window.location.href='index.html'">Submit</button>
-
-                 </form>
-				 
-				 </div>
-				 
-				  <div class="col-lg-3"></div>
-		    </div>
-  
-  
-   </div>
-   <br><br><br>
-
-   
-   </div>
+                        </div>
 	
+						<div class="col-md-8">
+                            <div class="card ">
+                                <div class="card-header ">
+                                    <h4 class="card-title">Customer Behavior</h4>
+                                    <p class="card-category">24 Hours performance</p>
+                                </div>
+                                <div class="card-body ">
+                                    <div class="card-body"><img src="line.png" class="img-responsive" style="width:100%" "height:20%"></div>
+                                </div>
+                                <div class="card-footer ">
+                                    <div class="legend">
+                                        <i class="fa fa-circle text-info"></i> Open
+                                        <i class="fa fa-circle text-danger"></i> Click
+                                        <i class="fa fa-circle text-warning"></i> Click Second Time
+                                    </div>
+                                    <hr>
+                                    <div class="stats">
+                                        <i class="fa fa-history"></i> Updated 3 minutes ago
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+						</div>  
+                   </div>     
+           
+	 </section>
+	 <section>
+	     <div class="content">
+                <div class="container-fluid">
+	               <div class="row">
+				        <div class="col-md-3"></div>
+                        <div class="col-md-6">
+                            <div class="card ">
+                                <div class="card-header ">
+                                    <h4 class="card-title">2020 Sales</h4>
+                                    <p class="card-category">All products including Taxes</p>
+                                </div>
+                                <div class="card-body ">
+                                     <div class="card-body"><img src="sales.png" class="img-responsive" style="width:100%" "height:40%"></div>
+                                </div>
+                                <div class="card-footer ">
+                                    <div class="legend">
+                                        <i class="fa fa-circle text-info"></i> HudaBeauty sales
+                                        <i class="fa fa-circle text-danger"></i> Mac Cosmetics Series
+                                    </div>
+                                    <hr>
+                                    <div class="stats">
+                                        <i class="fa fa-check"></i> Data information certified
+                                    </div>
+                                </div>
+                            </div>
+							<div class="col-md-3"></div>
+                        </div>
+                    </div>
+                </div>					
+            </div>        
+	 </section>
+
+     
+    
+	</div>
+
+
+
+    
 	<section id="footer">
         <div class="container">
             

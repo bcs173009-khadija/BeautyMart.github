@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Contact Us</title>
+    <title>LogIn</title>
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -11,6 +11,9 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	
+	<link rel="stylesheet" href="bootstrap.min.css" />
+	
 
     <link href="bootstrap.min.css" rel="stylesheet" />
     <link href="bootstrapv3.min.css" rel="stylesheet" />
@@ -254,13 +257,22 @@
             }
         }
     </style>
-    <script>
-        $(document).ready(function () {
-            $("#submit").click(function () {
-                alert("you are sucessfully regristerd  in BeautyMart.com ")
-            })
-        });
-    </script>
+   <script src="jquery.js"></script>
+	<script>
+	
+	$(document).ready(function(){
+    // Get value on button click and show alert
+      
+    $("#login_button").click(function(){
+	
+	 var radioValue = $("input[name='option']:checked").val();
+            if(radioValue == 'admin' ){
+                $("login_button").onclick(window.location.href='admin.html');
+            }
+     
+	});
+	});
+	</script>
 
 
 
@@ -281,12 +293,12 @@
 	  </div>
     </div>
         <!--navbar-->
-		<div style="background-image: url('peach.jpg');">
+	<div style="background-image: url('peach.jpg');">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 		    <a class="navbar-brand" href="index.html">
 	          <image class="img-circle" src="logo.jpg">
 			</a> 
-            <a class="navbar-brand" href="contact.html"><h2>Contact Us</h2></a>
+            <a class="navbar-brand" href="login.html"><h2>LogIn</h2></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -296,14 +308,14 @@
                     <li class="nav-item active">
                         <a class="nav-link" href="index.html"><h3>Home</h3> <span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="About.html"><h3>About</h3></a>
-                    </li>
+                    
                     
                     <li class="nav-item active">
                         <a class="nav-link" href="deals.html"><h3>Deals</h3> <span class="sr-only">(current)</span></a>
                     </li>
-                    
+                    <li id="#contact" class="nav-item active">
+                        <a class="nav-link" href="contact.html"><h3>Contact Us</h3><span class="sr-only">(current)</span></a>
+                    </li>
                     
                     <li id="#contact" class="nav-item active">
                         <a class="nav-link" href="Products.html"><h3>Products</h3><span class="sr-only">(current)</span></a>
@@ -330,63 +342,42 @@
             </div>
         </nav>
 
-
-
-
-
-
-  <div class="container">
+		<div class="container">
          
 		    <div class="row">
 			     <div class="col-lg-3"></div>
 				 
 		         <div style="border:groove" class="col-lg-6">
-				   <form>
-                    <fieldset>
-                       <legend>Contact Us</legend>
-					   
-					        <div class="form-group">
-                                 <label for="exampleFirstName">First Name</label>
-                                 <input type="fname" class="form-control" id="exampleFirstName"  placeholder="Enter First Name">
-                                 
+				    <form>
+                        <fieldset>
+                            <legend><b>CREATE OR LOGIN ACCOUNT</b></legend>
+
+                            <div class="form-group">
+                                <p>If you have an account with us, please log in.</p>
+                                <label for="exampleInputEmail1">Email address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                                <small id="passwordHelp" class="form-text text-muted">Required Fields</small> 
+								<p class="card-text">Login As</p>
+                                <label><input type="radio" name="option" value="user">User</label> 
+                                 </br>
+                               <label><input type="radio" name="option" value="admin">Admin</label>
                             </div>
 							
-							<div class="form-group">
-                                 <label for="exampleLastName">Last Name</label>
-                                 <input type="lname" class="form-control" id="exampleLastName"  placeholder="Enter Last Name">
-                                 
-                            </div>
-                           
                             <div class="form-group">
-                                 <label for="exampleInputEmail1">Email address</label>
-                                 <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                                 
-                            </div>
-                            <div class="form-group">
-                                 <label for="exampleInputPassword1">Password</label>
-                                 <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                            </div>
-                            <div class="form-group">
-                                 <label for="messagetype1">Message Type</label>
-                                 <select class="form-control" id="messagetype1">
-                                     <option>Select Message Type</option>
-                                     <option>Product Information</option>
-                                     <option>Order Information</option>
-                                     <option>Missing Items</option>
-                                     <option>General Question</option>
-                                 </select>
-                            </div>
-                            <div class="form-group">
-                                      <label for="comment">Comment</label>
-                                      <textarea class="form-control" id="comment" rows="3"></textarea>
-                            </div>
-    
-      
-                    </fieldset>
-                   
-                          <button type="button" class="button is-pulled-right" onclick=" window.location.href='index.html'">Submit</button>
+                                
+								
+                                <button type="button" class="button is-pulled-right" id="login_button" onclick="window.location.href='index.html'">LOGIN</button>
+                                <button type="button" class="button is-pulled-right" onclick=" window.location.href='createaccount.html'">CREATE AN ACCOUNT</button>
+							
+							</div>
 
-                 </form>
+                        </fieldset>
+                    </form>
 				 
 				 </div>
 				 
@@ -397,9 +388,10 @@
    </div>
    <br><br><br>
 
-   
-   </div>
-	
+
+
+    
+	</div>
 	<section id="footer">
         <div class="container">
             

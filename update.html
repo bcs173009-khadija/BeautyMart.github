@@ -3,7 +3,12 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Contact Us</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <title>Update Products</title>
+	
+    <script src="jquery.js"></script>
+    <script src="bootstrap.min.js"></script>
+       
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -11,6 +16,8 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	
+	<link rel="stylesheet" href="bootstrap.min.css" />
 
     <link href="bootstrap.min.css" rel="stylesheet" />
     <link href="bootstrapv3.min.css" rel="stylesheet" />
@@ -254,14 +261,19 @@
             }
         }
     </style>
+   
     <script>
-        $(document).ready(function () {
-            $("#submit").click(function () {
-                alert("you are sucessfully regristerd  in BeautyMart.com ")
-            })
-        });
-    </script>
-
+	
+	$(document).ready(function(){
+    // Get value on button click and show alert
+      
+    $("#btnUpdate").click(function(){
+	
+	 alert("Product successfully updated");
+     
+	});
+	});
+	</script>
 
 
 
@@ -281,125 +293,175 @@
 	  </div>
     </div>
         <!--navbar-->
-		<div style="background-image: url('peach.jpg');">
+	<div style="background-image: url('peach.jpg');">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 		    <a class="navbar-brand" href="index.html">
 	          <image class="img-circle" src="logo.jpg">
 			</a> 
-            <a class="navbar-brand" href="contact.html"><h2>Contact Us</h2></a>
+            <a class="navbar-brand" href="update.html"><h2>UpdateProducts</h2></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="index.html"><h3>Home</h3> <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="About.html"><h3>About</h3></a>
-                    </li>
                     
-                    <li class="nav-item active">
-                        <a class="nav-link" href="deals.html"><h3>Deals</h3> <span class="sr-only">(current)</span></a>
+					<li class="nav-item active">
+                        <a class="nav-link" href="admin.html"><h3>Dashboard</h3> <span class="sr-only">(current)</span></a>
                     </li>
-                    
-                    
+					<li class="nav-item active">
+                        <a class="nav-link" href="add.html"><h3>Add/RemoveProduct</h3> <span class="sr-only">(current)</span></a>
+                    </li>
+                
                     <li id="#contact" class="nav-item active">
-                        <a class="nav-link" href="Products.html"><h3>Products</h3><span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="index.html"><h3>SignOut</h3><span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item active dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <h3>Brands</h3>
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="https://hudabeauty.com/us/en_US/home">Huda Beauty</a>
-                            <a class="dropdown-item" href="https://www.maccosmetics.com/">MAC</a>
-                            <a class="dropdown-item" href="https://www.maybelline.com/">Maybelline</a>
-                            <a class="dropdown-item" href="http://www.bbamna.com/">Beautify by Amna</a>
-                            <a class="dropdown-item" href="https://www.lorealparisusa.com/products/makeup.aspx">L'OREAL Paris</a>
-                        </div>
-                    </li>
+                    
+                   
 					<ul class="nav navbar-nav navbar-right">
 		          <form class="form-inline my-2 my-lg-0">
                     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                     <a class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</a>
                   </form>
-                   <li class="nav-item active"><a href="cart.html"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+                   
                 </ul>
             </div>
         </nav>
 
+     <section>
+	       <div class="container">    
+		  <h1 class="text-center text-capitalize pt-5 "><b>All Products</b></h1>
+		  <br><br><br><br>
+          <div class="row">
+            <div class="col-sm-4">
+              <div class="panel panel-success">
+                 <div class="panel-heading">FOUNDATIONS</div>
+                   <div class="panel-body"><img src="imagess.jpg" class="img-responsive" style="width:100%" "height:40%" alt="Image"></div>
+                     <div class="panel-footer">Makeup Forever full coverage foundations</div>
+					 <span class="price is-pulled-right">Rs2100</span>
+				     <button type="button" class="button is-pulled-right add-to-cart" data-toggle="modal" data-target="#myModal">Update Product</button>
+					
+                   </div>
+            </div>
+            <div class="col-sm-4"> 
+                <div class="panel panel-danger">
+                    <div class="panel-heading">EYE SHADOW PALATES</div>
+                        <div class="panel-body"><img src="lede.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
+                         <div class="panel-footer">14colors eyeshadow palate</div>
+						 <span class="price is-pulled-right">Rs6000</span>
+						<button type="button" class="button is-pulled-right add-to-cart" data-toggle="modal" data-target="#myModal">Update Product</button>
+                </div>
+            </div>
+            <div class="col-sm-4"> 
+               <div class="panel panel-success">
+                  <div class="panel-heading">MAKEUP BRUSHES</div>
+                     <div class="panel-body"><img src="images.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
+                         <div class="panel-footer">Buy professional-quality makeup brush sets online at amazing prices from BH Cosmetics.</div>
+						 <span class="price is-pulled-right">Rs1800</span>
+						 <button type="button" class="button is-pulled-right add-to-cart" data-toggle="modal" data-target="#myModal">Update Product</button>
+               </div>
+            </div>
+         </div>
+        </div><br>
 
+    <div class="container">    
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="panel panel-danger">
+                  <div class="panel-heading">LIPSTICKES</div>
+                  <div class="panel-body"><img src="lipstick.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
+                  <div class="panel-footer">This creamy matte lipstick features high colour payoff in a no-shine matte finish.</div>
+				  <span class="price is-pulled-right">Rs1000</span>
+				  <button type="button" class="button is-pulled-right add-to-cart" data-toggle="modal" data-target="#myModal">Update Product</button>
+                </div>
+            </div>
+            <div class="col-sm-4"> 
+                <div class="panel panel-success">
+                    <div class="panel-heading">CONCELERS</div>
+                      <div class="panel-body"><img src="concelar.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
+                      <div class="panel-footer">Dark circles and undereye discoloration,concealers that have radiant or luminizing formulas</div>
+					  <span class="price is-pulled-right">Rs1100</span>
+					  <button type="button" class="button is-pulled-right add-to-cart" data-toggle="modal" data-target="#myModal">Update Product</button>
+                </div>
+            </div>
+            <div class="col-sm-4"> 
+                <div class="panel panel-danger">
+                    <div class="panel-heading">HIGHLIGHTERS</div>
+                       <div class="panel-body"><img src="HL.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
+                       <div class="panel-footer">Face highlighter makeup! Browse powder, pearls, liquid & highlighter sticks. Affordable, cruelty-free beauty</div>
+					   <span class="price is-pulled-right">Rs1500</span>
+					   <button type="button" class="button is-pulled-right add-to-cart" data-toggle="modal" data-target="#myModal">Update Product</button>
+                </div>
+            </div>
+        </div>
+    </div><br>    
+	 </section>
 
+     
+	 
+	 <div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">Update Product</h4>
+                <button type="button" class="close" data-dismiss="modal">×</button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="ProductName">Product Name</label>
+                        <input type="text" class="form-control" id="product_name" placeholder="Peach Lipstick" />
+                    </div>
+                    <div class="form-group">
+                        <label for="Name">Price</label>
+                        <input type="text" class="form-control" id="Product_price" placeholder="PKR 1,200" />
+                    </div>
+					<div class="form-group">
+                        <label for="Name">Description</label>
+                        <input type="text" class="form-control" id="description" placeholder="sweet touch colors" />
+                    </div>
+					<div class="form-group">
+                        <label for="Name">Brand</label>
+                        <input type="text" class="form-control" id="brand" placeholder="Mac" />
+                    </div><div class="form-group">
+                        <label for="Name">Product Catagory</label>
+                        <input type="text" class="form-control" id="catagory" placeholder="lipsticks"/>
+						</br>
 
-
-
-  <div class="container">
-         
-		    <div class="row">
-			     <div class="col-lg-3"></div>
-				 
-		         <div style="border:groove" class="col-lg-6">
-				   <form>
-                    <fieldset>
-                       <legend>Contact Us</legend>
-					   
-					        <div class="form-group">
-                                 <label for="exampleFirstName">First Name</label>
-                                 <input type="fname" class="form-control" id="exampleFirstName"  placeholder="Enter First Name">
-                                 
-                            </div>
-							
-							<div class="form-group">
-                                 <label for="exampleLastName">Last Name</label>
-                                 <input type="lname" class="form-control" id="exampleLastName"  placeholder="Enter Last Name">
-                                 
-                            </div>
-                           
-                            <div class="form-group">
-                                 <label for="exampleInputEmail1">Email address</label>
-                                 <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                                 
-                            </div>
-                            <div class="form-group">
-                                 <label for="exampleInputPassword1">Password</label>
-                                 <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                            </div>
-                            <div class="form-group">
-                                 <label for="messagetype1">Message Type</label>
-                                 <select class="form-control" id="messagetype1">
-                                     <option>Select Message Type</option>
-                                     <option>Product Information</option>
-                                     <option>Order Information</option>
-                                     <option>Missing Items</option>
-                                     <option>General Question</option>
-                                 </select>
-                            </div>
-                            <div class="form-group">
-                                      <label for="comment">Comment</label>
-                                      <textarea class="form-control" id="comment" rows="3"></textarea>
-                            </div>
+						 <label for="Name">SHADES</label>
+						 </br>
+						 
+						 <div class="form-check form-check-inline">
+  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+  <label class="form-check-label" for="inlineRadio1">Dark</label>
+</div>
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+  <label class="form-check-label" for="inlineRadio2">Light</label>
+</div>
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+  <label class="form-check-label" for="inlineRadio3">Medium</label>
+</div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <!-- <button type="button" class="btn btn-primary" id="btnAdd">Add</button> -->
+                <button type="button" class="button is-pulled-right" data-dismiss="modal" id="btnUpdate">Update</button>
+                <button type="button" class="button is-pulled-right" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+	 
+	 
     
-      
-                    </fieldset>
-                   
-                          <button type="button" class="button is-pulled-right" onclick=" window.location.href='index.html'">Submit</button>
+	</div>
 
-                 </form>
-				 
-				 </div>
-				 
-				  <div class="col-lg-3"></div>
-		    </div>
-  
-  
-   </div>
-   <br><br><br>
 
-   
-   </div>
-	
+
+    
 	<section id="footer">
         <div class="container">
             
