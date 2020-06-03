@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+       <title>Cart</title>
+         <meta name="viewport" content="width=device-width, initial-scale=1">
+         <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="bootstrap.min.css">
+	<script src="jquery.js"></script>
+	<script>
+	
+	$(document).ready(function(){
+    // Get value on button click and show alert
+      
+    $(".btn-danger").click(function(){
+	
+	 alert("Product Removed");
+     
+	});
+	});
+	</script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  font-family: Arial;
+  font-size: 17px;
+  padding: 8px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  margin: 0 -16px;
+}
+
+.col-25 {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+}
+
+.col-50 {
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
+}
+
+.col-75 {
+  -ms-flex: 75%; /* IE10 */
+  flex: 75%;
+}
+
+.col-25,
+.col-50,
+.col-75 {
+  padding: 0 16px;
+}
+
+.container {
+  background-color: #f2f2f2;
+  padding: 5px 20px 15px 20px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+}
+
+input[type=text] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.icon-container {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
+}
+
+.btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+a {
+  color: #2196F3;
+}
+
+hr {
+  border: 1px solid lightgrey;
+}
+
+span.price {
+  float: right;
+  color: grey;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (also change the direction - make the "cart" column go on top) */
+@media (max-width: 800px) {
+  .row {
+    flex-direction: column-reverse;
+  }
+  .col-25 {
+    margin-bottom: 20px;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-10 col-md-offset-1">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+							<th>Quantity</th>
+                            <th class="text-center">Price</th>
+                            
+                            <th> </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="col-sm-8 col-md-6">
+                                <div class="media">
+                                    <a class="thumbnail pull-left" href="#"> <img class="media-object" src="imagess.jpg" style="width: 72px; height: 72px;"> </a>
+                                    <div class="media-body">
+                                        <h4>Foundations</h4>
+
+                                        <span>Status: </span><span class="text-success"><strong>Available</strong></span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="col-sm-1 col-md-1" style="text-align: center">
+                                <input type="email" class="form-control" id="exampleInputEmail1" value="3">
+                            </td>
+                            <td class="col-sm-1 col-md-1 text-center"><strong>2100</strong></td>
+                            
+                            <td class="col-sm-1 col-md-1">
+                                <button type="button" class="btn btn-danger" >
+                                   Remove
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-md-6">
+                                <div class="media">
+                                    <a class="thumbnail pull-left" href="#"> <img class="media-object" src="lede.jpg" style="width: 72px; height: 72px;"> </a>
+                                    <div class="media-body">
+                                        <h4>Eye Shadow Palate</h4>
+
+                                        <span>Status: </span><span class="text-warning"><strong>Available</strong></span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="col-md-1" style="text-align: center">
+                                <input type="email" class="form-control" id="exampleInputEmail1" value="2">
+                            </td>
+                            <td class="col-md-1 text-center"><strong>6000</strong></td>
+                            
+                            <td class="col-md-1">
+                                <button type="button" class="btn btn-danger" >
+                                    Remove
+                                </button>
+                            </td>
+                        </tr>
+						
+						<tr>
+                            <td>   </td>
+                            <td>   </td>
+                     
+                            <td><h3>Total</h3></td>
+                            <td class="text-right"><h3><strong>8,100 PKR</strong></h3></td>
+                        </tr>
+                
+                        <tr>
+                            <td>   </td>
+                            <td>   </td>
+   
+                            <td>
+							<button type="button" class="btn btn-success" onclick="window.location.href='index.html'">
+                             Continue Shopping </li>
+                                </button>
+                                
+                            </td>
+							<td>
+                                <button type="button" class="btn btn-success" onclick="window.location.href='checkout.html'">
+                                    Checkout 
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+	
+	
+	
+
+
+
+

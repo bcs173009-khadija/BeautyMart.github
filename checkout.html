@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<title>Checkout</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
@@ -173,21 +174,11 @@ span.price {
         <label>
           <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
         </label>
-        <input type="submit" value="Continue to checkout" class="btn">
+		<button class="btn btn-primary btn-lg btn-block" type="button" onclick="window.location.href='checkout.html' " >Continue to checkout</button>
       </form>
     </div>
   </div>
-  <div class="col-25">
-    <div class="container">
-      <h4>Cart <span class="price" style="color:black"><i class="fa fa-shopping-cart"></i> <b></b></span></h4>
-      <p><a href="#">Product 1</a> <span class="price"></span></p>
-      <p><a href="#">Product 2</a> <span class="price"></span></p>
-      <p><a href="#">Product 3</a> <span class="price"></span></p>
-      <p><a href="#">Product 4</a> <span class="price"></span></p>
-      <hr>
-      <p>Total <span class="price" style="color:black"><b></b></span></p>
-    </div>
-  </div>
+  
 </div>
 
 </body>

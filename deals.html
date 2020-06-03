@@ -26,6 +26,54 @@
             font-family: 'Josefin Sans', sans-serif;
         }
 		
+		 .overlay {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            transition: opacity 500ms;
+            visibility: hidden;
+            opacity: 0;
+        }
+
+            .overlay:target {
+                visibility: visible;
+                opacity: 1;
+            }
+
+        .popup {
+            margin: 70px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 5px;
+            width: 40%;
+            position: relative;
+            transition: all 5s ease-in-out;
+        }
+
+
+            .popup .close {
+                position: absolute;
+                top: 20px;
+                right: 30px;
+                transition: all 200ms;
+                font-size: 30px;
+                font-weight: bold;
+                text-decoration: none;
+                color: #333;
+            }
+
+                .popup .close:hover {
+                    color: black;
+                }
+
+            .popup .content {
+                max-height: 50%;
+                overflow: auto;
+            }
+		
 		input[type=text], input[type=password] {
             width: 100%;
             padding: 15px;
@@ -246,6 +294,14 @@
                 }
 
         @media (max-width:767px) {
+		    .box {
+                width: 90%;
+            }
+
+            .popup {
+                width: 90%;
+            }
+		
             #footer h5 {
                 padding-left: 0;
                 border-left: transparent;
@@ -296,6 +352,10 @@
                     <li class="nav-item active">
                         <a class="nav-link" href="index.html"><h3>Home</h3> <span class="sr-only">(current)</span></a>
                     </li>
+					<li class="nav-item active">
+                        <a class="nav-link" href="About.html"><h3>About</h3></a>
+                    </li>
+                    
                     <li class="nav-item active">
                         <a class="nav-link" href="Store.html"><h3>Stores</h3></a>
                     </li>
@@ -304,7 +364,9 @@
                     <li id="#contact" class="nav-item active">
                         <a class="nav-link" href="contact.html"><h3>Contact Us</h3><span class="sr-only">(current)</span></a>
                     </li>
-                    
+                    <li id="#contact" class="nav-item active">
+                        <a class="nav-link" href="Products.html"><h3>Products</h3><span class="sr-only">(current)</span></a>
+                    </li>
                  
                     <li class="nav-item active dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -323,7 +385,7 @@
                     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                     <a class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</a>
                   </form>
-                   <li class="nav-item active"><a href="checkout.html"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+                   <li class="nav-item active"><a href="cart.html"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
                 </ul>
             </div>
         </nav>
@@ -390,7 +452,7 @@
                    <div class="panel-body"><img src="imagess.jpg" class="img-responsive" style="width:100%" "height:40%" alt="Image"></div>
                      <div class="panel-footer">Makeup Forever full coverage foundations</div>
 					 <span class="price is-pulled-right">Rs2100</span>
-					 <button class="button is-pulled-right add-to-cart">Add to Cart</button>
+					 <a href="#popup"><button class="button is-pulled-right add-to-cart">Add to Cart</button> </a>
                    </div>
             </div>
             <div class="col-sm-4"> 
@@ -399,7 +461,7 @@
                         <div class="panel-body"><img src="lede.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
                          <div class="panel-footer">14colors eyeshadow palate</div>
 						 <span class="price is-pulled-right">Rs6000</span>
-						 <button class="button is-pulled-right add-to-cart">Add to Cart</button>
+						<a href="#popup"><button class="button is-pulled-right add-to-cart">Add to Cart</button> </a>
                 </div>
             </div>
             <div class="col-sm-4"> 
@@ -408,7 +470,7 @@
                      <div class="panel-body"><img src="images.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
                          <div class="panel-footer">Buy professional-quality makeup brush sets online at amazing prices from BH Cosmetics.</div>
 						 <span class="price is-pulled-right">Rs1800</span>
-						 <button class="button is-pulled-right add-to-cart">Add to Cart</button>
+						<a href="#popup"><button class="button is-pulled-right add-to-cart">Add to Cart</button> </a>
                </div>
             </div>
          </div>
@@ -422,7 +484,7 @@
                   <div class="panel-body"><img src="lipstick.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
                   <div class="panel-footer">This creamy matte lipstick features high colour payoff in a no-shine matte finish.</div>
 				  <span class="price is-pulled-right">Rs1000</span>
-				  <button class="button is-pulled-right add-to-cart">Add to Cart</button>
+				 <a href="#popup"><button class="button is-pulled-right add-to-cart">Add to Cart</button> </a>
                 </div>
             </div>
             <div class="col-sm-4"> 
@@ -431,7 +493,7 @@
                       <div class="panel-body"><img src="concelar.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
                       <div class="panel-footer">Dark circles and undereye discoloration,concealers that have radiant or luminizing formulas</div>
 					  <span class="price is-pulled-right">Rs1100</span>
-					  <button class="button is-pulled-right add-to-cart">Add to Cart</button>
+					  <a href="#popup"><button class="button is-pulled-right add-to-cart">Add to Cart</button> </a>
                 </div>
             </div>
             <div class="col-sm-4"> 
@@ -440,13 +502,24 @@
                        <div class="panel-body"><img src="HL.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
                        <div class="panel-footer">Face highlighter makeup! Browse powder, pearls, liquid & highlighter sticks. Affordable, cruelty-free beauty</div>
 					   <span class="price is-pulled-right">Rs1500</span>
-					   <button class="button is-pulled-right add-to-cart">Add to Cart</button>
+					   <a href="#popup"><button class="button is-pulled-right add-to-cart">Add to Cart</button> </a>
                 </div>
             </div>
         </div>
     </div><br>
 
-            
+    <div id="popup" class="overlay">
+        <div class="popup">
+
+            <div>YOU HAVE SUCCESSFULLY ADDED TO THE SHOPPING CART.....</div>
+            <div class="card-body">
+
+                <a href="cart.html"><button class="button is-pulled-right add-to-cart">VIEW CART</button> </a>
+                <a href="deals.html"><button class="button is-pulled-right add-to-cart">CONTINUE SHOPPING</button> </a>
+            </div>
+
+        </div>
+    </div>        
                       
     </div>
 	

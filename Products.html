@@ -26,6 +26,54 @@
             font-family: 'Josefin Sans', sans-serif;
         }
 		
+		.overlay {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            transition: opacity 500ms;
+            visibility: hidden;
+            opacity: 0;
+        }
+
+            .overlay:target {
+                visibility: visible;
+                opacity: 1;
+            }
+
+        .popup {
+            margin: 70px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 5px;
+            width: 40%;
+            position: relative;
+            transition: all 5s ease-in-out;
+        }
+
+
+            .popup .close {
+                position: absolute;
+                top: 20px;
+                right: 30px;
+                transition: all 200ms;
+                font-size: 30px;
+                font-weight: bold;
+                text-decoration: none;
+                color: #333;
+            }
+
+                .popup .close:hover {
+                    color: black;
+                }
+
+            .popup .content {
+                max-height: 50%;
+                overflow: auto;
+            }
+		
 		input[type=text], input[type=password] {
             width: 100%;
             padding: 15px;
@@ -246,6 +294,14 @@
                 }
 
         @media (max-width:767px) {
+		
+		 .box {
+                width: 90%;
+            }
+
+            .popup {
+                width: 90%;
+            }
             #footer h5 {
                 padding-left: 0;
                 border-left: transparent;
@@ -325,7 +381,7 @@
                     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                     <a class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</a>
                   </form>
-                   <li class="nav-item active"><a href="checkout.html"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+                   <li class="nav-item active"><a href="cart.html"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
                 </ul>
             </div>
         </nav>
@@ -342,6 +398,7 @@
                     <div class="panel-heading">Bag Organizer</div>
                     <div class="panel-body"><img src="pac8.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
                     <div class="panel-footer">$46.00</div>
+					<a href="#popup"><button class="button is-pulled-right add-to-cart">Add to Cart</button> </a>
                 </div>
             </div>
             <div class="col-sm-4">
@@ -349,6 +406,7 @@
                     <div class="panel-heading">Cosmetic Package Makeup</div>
                     <div class="panel-body"><img src="pac2.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
                     <div class="panel-footer">$50.00</div>
+					<a href="#popup"><button class="button is-pulled-right add-to-cart">Add to Cart</button> </a>
                 </div>
             </div>
             <div class="col-sm-4">
@@ -356,6 +414,7 @@
                     <div class="panel-heading">Liquid Foundation</div>
                     <div class="panel-body"><img src="pac3.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
                     <div class="panel-footer">$84.00</div>
+					<a href="#popup"><button class="button is-pulled-right add-to-cart">Add to Cart</button> </a>
                 </div>
             </div>
             <div class="col-sm-4">
@@ -363,6 +422,7 @@
                     <div class="panel-heading">Liquid Lipstic Shades</div>
                     <div class="panel-body"><img src="pac4.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
                     <div class="panel-footer">$30.00</div>
+					<a href="#popup"><button class="button is-pulled-right add-to-cart">Add to Cart</button> </a>
                 </div>
                 </div>
                 <div class="col-sm-4">
@@ -370,6 +430,7 @@
                         <div class="panel-heading">2 Differnt colour Concealers</div>
                         <div class="panel-body"><img src="pac5.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
                         <div class="panel-footer">$68.00</div>
+						<a href="#popup"><button class="button is-pulled-right add-to-cart">Add to Cart</button> </a>
                     </div>
                 </div>
                 <div class="col-sm-4">
@@ -377,12 +438,26 @@
                         <div class="panel-heading">Makeup Package</div>
                         <div class="panel-body"><img src="pac6.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
                         <div class="panel-footer">$72.00</div>
+						<a href="#popup"><button class="button is-pulled-right add-to-cart">Add to Cart</button> </a>
                     </div>
                 </div>      
        
              </div>
 
             </div>
+			
+			 <div id="popup" class="overlay">
+        <div class="popup">
+
+            <div>YOU HAVE SUCCESSFULLY ADDED TO THE SHOPPING CART.....</div>
+            <div class="card-body">
+
+                <a href="cart.html"><button class="button is-pulled-right add-to-cart">VIEW CART</button> </a>
+                <a href="Products.html"><button class="button is-pulled-right add-to-cart">CONTINUE SHOPPING</button> </a>
+            </div>
+
+        </div>
+    </div>    
 			
 			</div>
 
